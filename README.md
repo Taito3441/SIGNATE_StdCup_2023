@@ -19,9 +19,9 @@
 **Overview**
 
 ### 配布データ
--学習用データ（train.csv）
--評価用データ（test.csv）
--応募用サンプルファイル（submit_sample.csv）
+- 学習用データ（train.csv）
+- 評価用データ（test.csv）
+- 応募用サンプルファイル（submit_sample.csv）
 
 |ヘッダ名称|値例|データ型|説明|
 |---|---|---|---|---|
