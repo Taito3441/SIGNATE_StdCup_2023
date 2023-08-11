@@ -37,4 +37,5 @@
 - データを大まかに理解したい →nb01
    - メソッド知らないしやり方わからんからGPTに聞く →GPT01
 <br>
-![画像](./img/nb01_.png)
+<img width="1011" alt="nb01_" src="https://github.com/Taito3441/SIGNATE_StdCup_2023/assets/127362083/88628dcd-86c7-4ef1-b720-79063b4b6a37">
+
