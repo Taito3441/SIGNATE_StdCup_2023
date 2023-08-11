@@ -8,6 +8,9 @@
 │   ├── submit_sample.csv
 │   ├── test.csv
 │   └── train.csv
+├── img
+│   ├── train_colomn_infomaiton.png
+│   └── train_colomn_infomaiton2.png
 └── nb
     └── Untitled.ipynb
 ```
