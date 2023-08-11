@@ -23,7 +23,7 @@
 - 評価用データ（test.csv）
 - 応募用サンプルファイル（submit_sample.csv）
 <br>
-![データ画像](./img/train_colomn_infomaiton.png)
+<img width="972" alt="train_colomn_infomaiton" src="https://github.com/Taito3441/SIGNATE_StdCup_2023/assets/127362083/77c81ce9-f091-4b9a-9057-f9dedf259932">
 <br>
 ![データ画像](./img/train_colomn_infomaiton2.png)
 
