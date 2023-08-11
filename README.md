@@ -23,9 +23,9 @@
 - 評価用データ（test.csv）
 - 応募用サンプルファイル（submit_sample.csv）
 <br>
-![データ画像](./img/train_colomn_infomaiton.png)
+![データ画像]("/img/train_colomn_infomaiton.png")
 <br>
-![データ画像](./img/train_colomn_infomaiton2.png)
+![データ画像]("/img/train_colomn_infomaiton2.png")
 
 ## Log
 ### 20230811
