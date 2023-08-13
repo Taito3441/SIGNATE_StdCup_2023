@@ -17,6 +17,7 @@
 ## Paper
 |No.|Status|Name|Detail|Date|Url|
 |---|---|---|---|---|---|
+|01|Done|Kaggle日記という戦い方|コンペの基本戦術！最初に読む|202009|[URL](https://zenn.dev/fkubota/articles/3d8afb0e919b555ef068)|
 
 ## Basics
 **Overview**
