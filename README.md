@@ -20,6 +20,7 @@
 
 ## Basics
 **Overview**
+[URL](https://signate.jp/competitions/1051/data)
 
 ### 配布データ
 - 学習用データ（train.csv）
@@ -38,4 +39,8 @@
    - メソッド知らないしやり方わからんからGPTに聞く →GPT01
 <br>
 <img width="1011" alt="nb01_" src="https://github.com/Taito3441/SIGNATE_StdCup_2023/assets/127362083/88628dcd-86c7-4ef1-b720-79063b4b6a37">
+<br>
+<img width="460" alt="GPT01" src="https://github.com/Taito3441/SIGNATE_StdCup_2023/assets/127362083/e5ababb3-d831-41a3-a544-4bbed2cc77a6">
 
+
+### 20230812
