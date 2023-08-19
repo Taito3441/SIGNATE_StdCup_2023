@@ -71,8 +71,8 @@
       - aのCylindersは6,4,8の順に多いが、t1,t5では8が５割、6が４割を占める。
       - aのfuelはgasが９割だがt1ではdieselが7割、t５だとdieselが5割
       - aのdriveはfwdが5割、4wdが３割だが、t1だと4wdが8割、t5だと4wdが7割
-      - aのsizeは5割がfull-sizeだが、t1,t2のfull-sizeの割合は9割
-      - aのtypeのtruckは1.5割、pickupは1割に満たないが、t1,t2だとtruck5割,pickup2.5割
+      - aのsizeは5割がfull-sizeだが、t1,t5のfull-sizeの割合は9割
+      - aのtypeのtruckは1.5割、pickupは1割に満たないが、t1,t5だとtruck5割,pickup2.5割
 ### 20230820
 
 ### 20230821
