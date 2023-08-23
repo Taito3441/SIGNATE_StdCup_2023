@@ -124,7 +124,52 @@
 
   
 ### 20230822
+今のところ、 "custom_score","odometer_group","year_period","origin_custom_score","origin_odometer_group",この5つの特徴量をつけてるやつが一番精度がいい。あとローカルでの精度が頼りにならなくなってきている。44.11-44.19あたりが精度良さそうだが、その中の**大小でtestの優劣はつけられない**。もしかすると44.20を超えたとしても投稿testでモッtもいい点が出る可能性も全然ある。
+ - nb14 一応、まだ特徴量を付け加えられないかと気になったので、"manufacturer_type"を追加。そしてodometer_groupとorigin_odometer_groupをつけていてodometerに引っ張られすぎているのではないかと思い"odometer_group"のみを削除してやってみる。
+   -  評価0.4408　←44.08でだいぶ良い点なのではなかろうか。投稿でもうまくいけば60位を切りそう。
+   -  14回目の投稿　暫定評価43.7065456　←やっぱダメだったー！笑　odometer＿groupとmanufacturer_typeのどちらがどう影響したのかもよくわからない、、
+ -  nb14　次は、nb07,nb08を見返してcustom_scoreのstr型とint型両方を入れてみることにした。
+   -  評価0.4413 "custom_score","year_period","origin_custom_score","origin_odometer_group","odometer_group","manufacturer_type",➕数字型"custom_score"
+   -  15回目の投稿 暫定評価　43.6848610　←まあまあいい！ やっぱローカルで44.11-44.19あたりが無難ぽそう
+ - nb14 次は"custom_score"を数字型にして、"manufacturer_type"も消す。"year_period","origin_custom_score","origin_odometer_group","odometer_group",➕数字型"custom_score"
+   - これで、"custom_score"が数字型が良いのか文字型が良いのかの扱いがわかる。4回目の投稿と、5回目の投稿の時に試したつもりだったが、記録が間違っていたらしく、数字型の方が投稿testで高い評価だったことに気がついた笑
+   - 評価44.13 16回目の投稿　暫定評価　43.6633446 ←順位64位に上昇！
+   - "custom_score"は数字型のみの方がいいことがわかった。あとマジでローカルの評価がこれ以上信用ならん泣
+ - nb14 次はodometer_groupとorigin_odometer_groupと、odometerに関する特徴量が二つ入っており、odometerに少し引っ張られているのではないかと思い、odometer_group単体の方を消した。
+   - "year_period","origin_custom_score","origin_odometer_group",➕数字型"custom_score"
+   - 評価44.11　←大きすぎず、いい感じなのでは？
+   - 17回目の投稿 暫定評価 43.6867129　←odometer_groupが必要な特徴量と再認識できたのでok
+ 
 
 ### 20230823
+ - nb15 次は、また他に特徴量を追加したら上がるのではないかと思い、"cylinders2_size",を入れた。cylindersとsizeをくっつけ文字列にしたもの。
+   - 評価44.12　←大きすぎず、いい感じなのでは？
+   - 18回目の投稿 暫定評価 43.6857383　←クソが！決して悪くはない!惜しい！　これ以上特徴量を増やすのは逆効果なのか？
+ - nb16 次はcylinders2_drive
+   - 評価は44.12　←nb14と大して違いがないように感じる。testとtrainの違いを見るグラフを見ても一致率がそこまで高くないように感じる。
+ - nb17 次はyear_period_originを追加した。originがモデルの重要な特徴量とくっつけると良い精度を出す傾向が強いと思ったからだ。
+   - 評価44.13
+   - 19回目の投稿 暫定評価 43.7110323 ←なかなか伸びない。小数点以下の評価は最終評価で簡単に揺れたりするのだろうか？
+   - 交差検証法を採用してるけど、一番悪い評価をカバーできるようにした方がいいのだろうか、
+ - nb17 次はnb14のに、year_period_origin_conditionを追加
+   - ぶっちゃけていうと、23:30超えてるのに投稿回数が3回残ってたから慌てて特徴量作って投稿した。
+   - 評価44.14
+   - 20回目の投稿 暫定評価　43.7102316
+ - nb17　次はnb14のやつにcustom_score_conditionを追加。
+   - 評価44.14
+   - 21回目の投稿　暫定評価　43.6557402 ←67位に上がった。
+ - nb18 次はnb17のやつに、transmission_fuelとcylinders2_manufacturerを追加。モデルの特徴量重要度の低いもの同士をくっつけた。
+   - 評価44.15
+   - 22回目の投稿　暫定評価　43.6600112
+ 
+custom_scoreという特徴量がかなり良いキーポイントになっていそうなので、あらためて重りの数字を考え直してみる
 
 ### 20230824
+**コンペ最終日**
+<br>
+今日は、testのvisualize_oof_pred(oof, pred)のグラフのx軸を12局面に分けて、それぞれの局面でどんな特徴の車が集まっているのかEDA分析をする。←今更笑
+<br>
+testデータとtrainの関係やcvと暫定評価やらの関係を、やっとコンペの全容がつかめてきた気がする。
+暫定評価が良くても、最終評価で順位が落ちることもあり得る。暫定評価だけでなく、最終評価を意識した**汎用性のある予測**も重要。←そのために、交差検証法の全てのfoldで良い点をとる。testとtrainの予測値の違いをできるだけなくす。
+<br>
+
